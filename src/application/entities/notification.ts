@@ -1,6 +1,8 @@
+import { Content } from './content';
+
 export interface NotificationProps {
   recipientId: string;
-  content: string;
+  content: Content;
   category: string;
   readAt?: Date | null;
   createdAt: Date;
@@ -14,12 +16,12 @@ export class Notification {
   }
 
   // Using the 'set' keyword allow us to define a setter
-  public set content(content: string) {
+  public set content(content: Content) {
     this.props.content = content;
   }
 
   // Using the 'get' keyword allow us to define a getter
-  public get content(): string {
+  public get content(): Content {
     return this.props.content;
   }
 
