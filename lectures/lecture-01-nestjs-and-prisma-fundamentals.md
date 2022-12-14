@@ -1,5 +1,11 @@
 # NestJS and Prisma Fundamentals
 
+- Sources:
+  - https://app.rocketseat.com.br/event/ignite-lab-04/nodejs/aula-2
+  - https://www.youtube.com/watch?v=qAbluRQ6uf0&t=4032s
+
+</br>
+
 - [NestJS](https://docs.nestjs.com)
   - Opinionated, yet customizable framework;
   - Further details in next lectures as well as in [NestJS fundamentals course notes](https://github.com/amaralc/nestjs-fundamentals);
