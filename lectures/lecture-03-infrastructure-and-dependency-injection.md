@@ -11,8 +11,16 @@
 </br>
 
 - TypeScript path configuration
-- Mappers concept
-- Model view
+
+</br>
+
+- Mappers (or parsers)
+  - The same entity (ex.: notification) can be represented in different data structures in different application layers;
+  - Mappers (or parsers) help to convert entity entity representation in different layers of the application
+- View Models
+  - Same as mappers, but for the http level
+  - In my opinion these are all parsers
+  - Despite the instructor's words, I think naming is critical although for now we will just follow along in order to complete the workshop;
 - Use cases
   - Cancel notification
     - Existing entities
