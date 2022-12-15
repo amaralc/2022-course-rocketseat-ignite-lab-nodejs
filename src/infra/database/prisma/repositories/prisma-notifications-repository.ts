@@ -16,7 +16,6 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
 
   async save(notification: Notification): Promise<void> {
     const prismaNotification = PrismaNotificationMapper.toPrisma(notification);
-    console.log('prismaNotification', prismaNotification);
 
     await this.prismaService.notification.update({
       where: {
@@ -31,15 +30,11 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
       where: { id: notificationId },
     });
 
-    console.log('findById:notification', notification);
-
     if (!notification) {
       return null;
     }
 
     const domainNotification = PrismaNotificationMapper.toDomain(notification);
-
-    console.log('toDomain', domainNotification);
 
     return domainNotification;
   }

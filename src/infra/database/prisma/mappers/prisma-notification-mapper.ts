@@ -16,7 +16,6 @@ export class PrismaNotificationMapper {
   }
 
   static toDomain(prismaNotification: PrismaNotification): Notification {
-    console.log('toDomainPrisma', prismaNotification);
     return new Notification(
       {
         category: prismaNotification.category,

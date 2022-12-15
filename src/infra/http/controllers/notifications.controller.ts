@@ -52,7 +52,6 @@ export class NotificationsController {
 
   @Get('from/:recipientId')
   async getFromRecipient(@Param('recipientId') recipientId: string) {
-    console.log('controller:recipientId', recipientId);
     const { notifications } = await this.getRecipientNotification.execute({
       recipientId,
     });
