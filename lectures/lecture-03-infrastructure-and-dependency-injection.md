@@ -33,4 +33,5 @@
     - Deal with use case errors
   - Undo notification read
 - Implement Prisma repository
+  - Remember that the notification in the persistence layer [has a different data structure than the same entity in the application layer](https://youtu.be/XK_auW3iuXg?t=4037);
 - HTTP Routes
