@@ -4,5 +4,5 @@ content-type: application/json
 {
   "recipientId": "91757df3-ed6a-4ac7-a514-444539e152f6",
   "category": "any",
-  "content": "my"
+  "content": "new content"
 }

@@ -27,11 +27,15 @@
     - Sometimes an entity has no corresponding table (or documents);
     - Sometimes an entity might be represented by two or more tables (or documents);
 
+  </br>
+
 - Repository pattern
 
   - Repository:
     - An intermediate between application layer and persistence layer [(Fernandes)](https://youtu.be/xbky26BIJT0?t=3537);
     - Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects [(Mee and Hieatt)](https://martinfowler.com/eaaCatalog/repository.html).
+
+</br>
 
 - NestJS
   - Works better with abstract classes then with interfaces (probably because the js code, after compilation, do not carry types and interfaces);
