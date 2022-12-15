@@ -40,3 +40,13 @@
 
 - Classes
   - Getters and Setters, used to prevent local properties from being mutated arbitrarily;
+
+</br>
+
+- Tests
+  - Commands
+    - (terminal) Run tests: `yarn test`;
+    - (terminal) Run tests with coverage report: `yarn test:cov`;
+  - Coverage
+    - There is no need to get 100% coverage;
+    - Use coverage report as a tool to help you to find out what else should be tested;
