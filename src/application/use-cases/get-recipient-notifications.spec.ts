@@ -26,6 +26,7 @@ describe('Get recipient notifications', () => {
       recipientId: 'recipient-01',
     });
 
+    console.log('notifications', notifications);
     expect(notifications).toHaveLength(2);
     expect(notifications).toEqual(
       expect.arrayContaining([

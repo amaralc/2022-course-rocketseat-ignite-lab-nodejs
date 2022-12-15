@@ -11,10 +11,12 @@ export class PrismaNotificationMapper {
       recipientId: notification.recipientId,
       readAt: notification.readAt,
       createdAt: notification.createdAt,
+      canceledAt: notification.canceledAt,
     };
   }
 
   static toDomain(prismaNotification: PrismaNotification): Notification {
+    console.log('toDomainPrisma', prismaNotification);
     return new Notification(
       {
         category: prismaNotification.category,

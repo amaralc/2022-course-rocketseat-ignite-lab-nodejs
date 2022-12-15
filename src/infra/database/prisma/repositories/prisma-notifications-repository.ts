@@ -16,6 +16,8 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
 
   async save(notification: Notification): Promise<void> {
     const prismaNotification = PrismaNotificationMapper.toPrisma(notification);
+    console.log('prismaNotification', prismaNotification);
+
     await this.prismaService.notification.update({
       where: {
         id: prismaNotification.id,
@@ -29,17 +31,23 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
       where: { id: notificationId },
     });
 
+    console.log('findById:notification', notification);
+
     if (!notification) {
       return null;
     }
 
-    return PrismaNotificationMapper.toDomain(notification);
+    const domainNotification = PrismaNotificationMapper.toDomain(notification);
+
+    console.log('toDomain', domainNotification);
+
+    return domainNotification;
   }
 
   async findManyByRecipientId(recipientId: string): Promise<Notification[]> {
     const prismaNotifications = await this.prismaService.notification.findMany({
       where: {
-        recipientId: recipientId,
+        recipientId,
       },
     });
 
@@ -52,7 +60,7 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
 
   async countManyByRecipientId(recipientId: string): Promise<number> {
     const count = await this.prismaService.notification.count({
-      where: { recipientId: recipientId },
+      where: { recipientId },
     });
     return count;
   }
