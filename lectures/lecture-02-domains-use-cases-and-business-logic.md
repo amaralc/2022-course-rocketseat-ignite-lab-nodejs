@@ -3,6 +3,7 @@
 - Sources:
   - https://app.rocketseat.com.br/event/ignite-lab-04/nodejs/aula-2
   - https://www.youtube.com/watch?v=xbky26BIJT0&t=2s
+    - continue at 01:08:36
 
 </br>
 
